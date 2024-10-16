@@ -94,15 +94,26 @@ server.on('close', ()=>{});
 server.on('error', (err)=>{});
 
 const http = require('http');
+const fs = require('fs');
 const server1 = http.createServer((req , res)=>{
     if (req.url === '/' && req.method === 'GET'){
         res.statusCode = 200;
         res.setHeader('Content-Type', 'text/html; charset=utf-8');
         res.end('<h1>Добро пожаловать на новую страницу</h1>');
-    } else if (req.url === '/about' && req.method === 'GET'){
+    } else if (req.url === '/user-data' && req.method === 'GET'){
         res.statusCode = 200;
-        res.setHeader('Content-Type', 'text/html; charset=utf-8');
-        res.end('<h1>Добро пожаловать на страницу О нас </h1>');
+        res.setHeader('Content-Type', 'application/json');
+
+        fs.readFile('../public/testData.json','utf-8', (err,data) => {
+            if (err) {
+                console.log('Ошибка файла при чтении');
+                req.statusCode = 500;
+                res.statusMessage = 'Cant reade file';
+                res.end();
+            }
+            res.end(data);
+        });
+
     } else {
         res.statusCode = 404;
         res.end('Страница не найдена');
@@ -112,3 +123,4 @@ const server1 = http.createServer((req , res)=>{
 server.listen(3000, () =>{
     console.log("server stated ah host http://localhost:3000")
 })
+

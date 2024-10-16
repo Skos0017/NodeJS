@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "Иван Иванов",
+        "age": 20,
+        "major": "Информатика",
+        "email": "ivan.ivanov@example.com"
+    },
+    {
+        "id": 2,
+        "name": "Мария Петрова",
+        "age": 22,
+        "major": "Экономика",
+        "email": "maria.petrova@example.com"
+    },
+    {
+        "id": 3,
+        "name": "Сергей Сидоров",
+        "age": 21,
+        "major": "Филология",
+        "email": "sergey.sidorov@example.com"
+    },
+    {
+        "id": 4,
+        "name": "Анна Смирнова",
+        "age": 19,
+        "major": "Математика",
+        "email": "anna.smirnova@example.com"
+    },
+    {
+        "id": 5,
+        "name": "Дмитрий Кузнецов",
+        "age": 23,
+        "major": "Физика",
+        "email": "dmitry.kuznetsov@example.com"
+    }
+]
