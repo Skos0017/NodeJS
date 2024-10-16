@@ -1,4 +1,4 @@
-import { machine } from 'os';
+import { machine }  require('os');
 const http = require('http');
 const fs = require('fs');
 const PORT = 3001;
