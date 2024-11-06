@@ -1,0 +1,8 @@
+CSR - client Side Rendering 
+SPA -  Single Page Application
+SSR -  server Side Rendering 
+MPA -   Multi Page Application
+Шаблонизаторы - Handlebars , Pug , Mustadge 
+
+
+npm install handlebars
